@@ -41,13 +41,15 @@ export const arrayConvertTree = (arr: any, parent: number = -1, map: Map = {
   }
   return out
 }
+
+
 /**
  * @description: 删除一个元素
  * @param { arr } 原数组
  * @param { ele } 要删除的值
  * @return: 删除后的数组
  */
-export const remove = (arr: any, ele: any) => {
+export const removeFindOne = (arr: any, ele: any) => {
   var index = arr.indexOf(ele);
   if (index > -1) {
     arr.splice(index, 1);
@@ -69,4 +71,13 @@ export const mergeSameGroup = (arr: any, property: string) => {
     memo[x[property]].push(x)
     return memo
   }, {})
+}
+
+
+/**
+ * @param {Array} arr
+ * @returns {Array}
+ */
+export function uniqueArr(arr: []) {
+  return Array.from(new Set(arr))
 }
