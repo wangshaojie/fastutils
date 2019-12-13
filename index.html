@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Webpack App</title>
+</head>
+
+<body>
+  <div id="app">
+    <h1>title</h1>
+  </div>
+  <div>
+    <h2>list</h2>
+  </div>
+  <button id="btn">click</button>
+  <script type="text/javascript" src="bundle.js"></script>
+  <script>
+    const el = document.querySelector('#btn')
+    el.addEventListener('click', () => {
+      printElem('app')
+    })
+  </script>
+</body>
+
+</html>
